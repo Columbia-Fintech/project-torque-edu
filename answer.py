@@ -4,7 +4,7 @@ import json
 
 # for single answer called by server.py
 
-CherieAPIKey = "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"
+APIKey = ""
 
 def truncate_answer(answer):
     last_period = answer.rfind('.')
@@ -13,7 +13,7 @@ def truncate_answer(answer):
         return answer[:last_period+1]
 
 def generate_completion_simple(query, max_tokens, temperature):
-    openai.api_key = CherieAPIKey
+    openai.api_key = APIKey
     outstr = ""
     res = openai.Completion.create(
         model="curie",
@@ -27,7 +27,7 @@ def generate_completion_simple(query, max_tokens, temperature):
 
 
 def generate_answer_simple(question, max_rerank=25, max_tokens=300):
-    openai.api_key = CherieAPIKey
+    openai.api_key = APIKey
 
     new_file = openai.File.list()["data"][-1]
     FILE_ID = new_file["id"]
@@ -64,7 +64,7 @@ def generate_answer(question, api_key = None, fine_tune_model = None, train_file
     if fine_tune_model is None:
         fine_tune_model = 'curie'
     if api_key is None:
-        api_key = CherieAPIKey
+        api_key = APIKey
     if train_file_id is None:
         new_file = openai.File.list()["data"][-1]
         train_file_id = new_file['id']
@@ -97,7 +97,7 @@ def generate_completion(question, api_key = None, fine_tune_model = None, temper
     if fine_tune_model is None:
         fine_tune_model = 'curie'
     if api_key is None:
-        api_key = CherieAPIKey
+        api_key = APIKey
 
     res = openai.Completion.create(
         model=fine_tune_model,

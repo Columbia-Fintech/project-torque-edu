@@ -3,8 +3,8 @@ import os
 import json
 import random
 
-CherieAPIKey = "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"
-FineTuneModelID = "ft-m8r9xxT3YNKFpZ22X1SFelWE"
+APIKey = ""
+FineTuneModelID = ""
 
 training_data_ex = {
     "prompt":"Question\n\n###\n\n",
@@ -114,4 +114,4 @@ if __name__ == '__main__':
     test_questions = list(test_data.keys())
     #print(len(test_questions), test_questions[0])
     #for rerank in range(10, 35, 5):
-    train_chatbox(APIKEY = CherieAPIKey, train_file = "trainData.jsonl",test_questions = test_questions, max_rerank = 20, max_tokens = 200)
+    train_chatbox(APIKEY = APIKey, train_file = "trainData.jsonl",test_questions = test_questions, max_rerank = 20, max_tokens = 200)
