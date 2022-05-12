@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="icon" href="data:,">
+
+    <!-- jquery -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Sans&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3b7457757f.js" crossorigin="anonymous"></script>
+    <title>Fintech TorqueE Chatbox</title>
+          <script type="text/javascript" src="{{ url_for('static', filename = 'home.js') }}"></script>
+
+  </head>
+
+  <body>
+    <div id="home-title-bg">
+        <div id="home-title">
+            Finance  Q & A
+        </div>
+    </div>
+    <div id="endpoint-container">
+        <label for="endpoint" >Select GPT endpoint:</label>
+            <select name="endpoint" id="endpoint">
+                <option value="completion">Completion</option>
+                <option value="answer">Answer</option>
+            </select>
+    </div>
+    <div id="start-chat-container">
+    <i class="fa-solid fa-comments" id="main-icon"></i>
+
+        Start Chat
+    </div>
+
+  </body>
+</html>

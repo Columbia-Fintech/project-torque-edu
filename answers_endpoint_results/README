@@ -1,0 +1,13 @@
+Execution commands related to files in the folder :
+
+# python test_result.py ${OPENAI_API_KEY} [train-file-id] testData.json output_curie_20_200_ans.txt curie 20 200
+# python test_result.py ${OPENAI_API_KEY} [train-file-id] testData.json output_curie_15_200_ans.txt curie 15 200
+# python test_result.py ${OPENAI_API_KEY} [train-file-id] testData.json output_curie_25_250_ans.txt curie 25 250
+# python test_result.py ${OPENAI_API_KEY} [train-file-id] testData.json output_curie_25_300_ans.txt curie 25 300
+# python test_result.py ${OPENAI_API_KEY} [train-file-id] testData.json output_curie_10_200_ans.txt curie 10 200
+
+# python test_result.py ${OPENAI_API_KEY} [train-file-id] testData.json output_davinci_20_200_ans.txt davinci 20 200
+# python test_result.py ${OPENAI_API_KEY} [train-file-id] testData.json output_davinci_15_200_ans.txt davinci 15 200
+# python test_result.py ${OPENAI_API_KEY} [train-file-id] testData.json output_davinci_25_250_ans.txt davinci 25 250
+# python test_result.py ${OPENAI_API_KEY} [train-file-id] testData.json output_davinci_25_300_ans.txt davinci 25 300
+# python test_result.py ${OPENAI_API_KEY} [train-file-id] testData.json output_davinci_10_200_ans.txt davinci 10 200

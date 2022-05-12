@@ -1,0 +1,258 @@
+:root {
+  --theme: #837168;
+  --scent: #D9B8B3;
+    --textL: 'Abril Fatface', cursive;
+    --textS: 'Roboto Slab', serif;
+}
+.container{
+    padding-left: 0px;
+    padding-right: 0px;
+    max-width: inherit;
+}
+
+#header{
+    padding: 3px;
+    text-align: center;
+    font-size: 16px;
+    color:var(--theme);
+    font-family: var(--textS);
+}
+
+.navbar-light .navbar-brand{
+    color:var(--theme);
+
+}
+.nav-link{
+    font-size: 16px;
+}
+#home-title-bg{
+    margin-top: -30px;
+    width: 100%;
+    height: 500px;
+    background-color: var(--scent);
+    padding-top: 400px;
+}
+
+#home-title{
+    font-size: 36px;
+    text-align: center;
+    vertical-align:bottom;
+    font-family: var(--textL);
+    color: var(--theme);
+}
+
+#start-chat-container{
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+    color: var(--theme);
+    font-family: var(--textS);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#main-icon{
+    margin-top: 10px;
+    margin-right: 20px;
+    font-weight: bold;
+    color: var(--scent);
+    font-size: 28px;
+}
+#chat-nav{
+    margin-left: 70px;
+    margin-top: 15px;
+    vertical-align: center;
+}
+
+#chat-icon{
+    margin-left: -10px;
+    color: var(--scent);
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#filter-container{
+    padding: 8px;
+    line-height: 1.5;
+    display: inline-block;
+    font-family: var(--textS);
+    font-size: 16px;
+}
+
+#filter-btn{
+    background-color:var(--scent);
+    color: var(--theme);
+    margin-left: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    line-height: inherit;
+}
+
+#filter-btn:hover{
+    background-color:lightgrey;
+    color: var(--scent);
+}
+
+#chat-page{
+    height: 600px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: -15px;
+    border: 8px double var(--scent);
+    color: var(--theme);
+    font-size: 16px;
+    font-family: var(--textS);
+    border-radius: 20px;
+    z-index: 100;
+    background-color: #D9B8B320 ;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 5px 5px 5px lightgrey;
+}
+
+#answer-display{
+    overflow: auto;
+    height: 500px;
+    border-radius: 20px;
+    z-index: 10;
+    margin: 10px;
+}
+
+#typing-area{
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+    z-index: 10;
+    height: 50px;
+    line-height: 50px;
+    align-content: center;
+    vertical-align: center;
+    background-color: white;
+}
+
+#question{
+    padding: 5px;
+    height: inherit;
+    width: 100%;
+    border: none;
+    line-height: 30px;
+}
+
+button{
+    background-color:var(--scent);
+    color: var(--theme);
+    font-weight: bold;
+    font-family: var(--textS);
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+}
+
+button:hover{
+    background-color:lightgrey;
+    color: var(--scent);
+}
+
+.col-md-1{
+    padding: 0px;
+}
+
+#q-btn{
+    width: inherit;
+    height: inherit;
+    font-size: 20px;
+}
+
+.q-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.a-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.display{
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: 5px;
+    font-family: var(--textS);
+    font-size: 16px;
+    color: white;
+    max-width: 80%;
+}
+.display_q{
+    align-self: self-end;
+    background-color: #83716890;
+}
+
+.display_a{
+    align-self: self-start;
+    background-color: #83716860 ;
+}
+
+#endpoint-container{
+    font-size: 16px;
+    text-align: center;
+    color: var(--theme);
+    line-height: 30px;
+    font-family: var(--textS);
+    margin-top: 20px;
+}
+
+.slider{
+    accent-color: var(--scent);
+    width: 100%;
+}
+
+.filter-wrap{
+    display: flex;
+    line-height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+select{
+    height: 25px;
+}
+
+label{
+    margin-bottom: 0px;
+}
+
+#overlay{
+    z-index: 200;
+    margin: 10px;
+    position: fixed;
+    border-radius: 20px;
+    display: none;
+    background: rgba(0,0,0,0.2);
+}
+.cv-spinner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px lightgrey solid;
+  border-top: 4px var(--scent) solid;
+  border-radius: 50%;
+  animation: sp-anime 0.8s infinite linear;
+}
+@keyframes sp-anime {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.is-hide{
+  display:none;
+}
